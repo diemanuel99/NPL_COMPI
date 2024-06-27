@@ -108,6 +108,8 @@ def principal():
             comboNeutroC.set('')
             comboAFD2.set('')
             puntajeFinalC.set(puntuarExpCliente(tBuenas, tMalas))
+        
+        puntajeGeneral.set((puntajeFinalA.get()+puntajeFinalC.get())/2)
     else:
         if not filenameAtencion:
             messagebox.showinfo(message="Debe seleccionar un archivo de texto de Entrada de Atencion al Cliente", title="Error de Entrada")
@@ -343,5 +345,14 @@ puntaje2.place(x=400, y=600)
 
 puntajeFinal2 = tk.Label(root, textvariable=puntajeFinalC, font=("Arial", 12), bg="black", fg="white")
 puntajeFinal2.place(x=590, y=600)
+
+puntajeGeneral=tk.IntVar()
+puntajeGeneral.set(0)
+
+puntajeG = tk.Label(root, text="Puntaje General: ", font=("Arial", 12), bg="black", fg="white")
+puntajeG.place(x=200, y=700)
+
+puntajeFinalG = tk.Label(root, textvariable=puntajeGeneral, font=("Arial", 12), bg="black", fg="white")
+puntajeFinalG.place(x=390, y=700)
 
 root.mainloop()
