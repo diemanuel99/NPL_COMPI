@@ -1,0 +1,28 @@
+{
+    "estados" : ["inicio","saludo", "despedida", "identificacion", "cordialidad", "otro"],
+    "alfabeto" : ["buenos","buenas","buen","dias","dia", "tardes", "noches", "hola", "adios", "gracias", "por", "favor", "hasta", "luego","chau","documento","cedula","nacimiento","disculpe","agradezco"],
+    "transiciones" : {
+        "inicio_buen" : "otro",
+        "inicio_buenos" : "otro",
+        "inicio_buenas" : "otro",
+        "inicio_hasta" : "otro",
+        "inicio_por" : "otro",
+        "otro_días" : "saludo",
+        "otro_tardes" : "saludo",
+        "otro_noches" : "saludo",
+        "otro_día" : "saludo",
+        "inicio_hola" : "saludo",
+        "otro_luego" : "despedida",
+        "inicio_chau" : "despedida",
+        "inicio_adiós" : "despedida",
+        "inicio_documento" : "identificacion",
+        "inicio_cédula" : "identificacion",
+        "inicio_nacimiento" : "identificacion",
+        "otro_favor" : "cordialidad",
+        "inicio_disculpe" : "cordialidad",
+        "inicio_agradezco" : "cordialidad",
+        "inicio_gracias" : "cordialidad"
+    },
+    "estadoInicial" : "inicio",
+    "estadosFinales" : ["saludo", "despedida", "identificacion", "cordialidad"]
+}
