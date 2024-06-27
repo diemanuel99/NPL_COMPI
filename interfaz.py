@@ -318,7 +318,7 @@ def agregarAFD2():
         comboNeutroC["values"]=list(filter(lambda x: x!=comboNeutroC.get(), comboNeutroC["values"]))
         comboNeutroC.set('')
 
-        afd.dataAFD1=datos_AFD2
+        afd.dataAFD2=datos_AFD2
         afd.escribirAFD()
         
         comboAFD2.set('')
